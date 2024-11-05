@@ -1,0 +1,55 @@
+.banner {
+    background: linear-gradient(45deg, #FFCC00, #FF3300); /* Gradiente de cores quentes, lembrando um relâmpago */
+    color: #FFFFFF; /* Texto branco para contraste */
+    text-align: center;
+    padding: 3em 2em; /* Aumentei o padding para dar um ar mais espaçoso e dinâmico */
+    border-radius: 15px; /* Bordas arredondadas para suavizar o visual */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra sutil para dar profundidade */
+}
+
+.banner__titulo {
+    font-size: 22px; /* Tamanho maior para dar destaque */
+    font-weight: 800; /* Peso mais forte para chamar atenção */
+    font-family: 'Roboto', sans-serif; /* Fonte moderna e mais legível */
+    text-transform: uppercase; /* Tudo em maiúsculas para dar impacto */
+    letter-spacing: 1px; /* Espaçamento entre letras para melhorar a legibilidade */
+    color: #FFFFFF;
+}
+
+.banner__texto {
+    font-weight: 500;
+    margin: 1em 0;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif; /* Fonte mais clean para o texto */
+    color: rgba(255, 255, 255, 0.9); /* Cor mais suave para o texto secundário */
+    line-height: 1.5; /* Aumentei o line-height para melhorar a leitura */
+}
+
+.banner__pesquisa {
+    background-color: transparent;
+    border: 2px solid #FFFFFF; /* Aumentei a espessura da borda para destacá-la mais */
+    color: #FFFFFF;
+    border-radius: 30px; /* Bordas mais arredondadas para um visual mais suave e moderno */
+    padding: 1em 2em;
+    width: 100%;
+    font-size: 16px; /* Ajustei o tamanho da fonte */
+    font-weight: 400;
+    outline: none;
+    transition: all 0.3s ease; /* Adicionei uma transição suave para o foco */
+}
+
+.banner__pesquisa::placeholder {
+    font-family: var(--fonte-principal); /* Mantive a fonte original */
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    color: #FFFFFF;
+    background: url("../img/Lupa.svg") no-repeat;
+    background-position: 1em center; /* Ajustei o background da lupa */
+}
+
+.banner__pesquisa:focus {
+    border-color: #FF3300; /* Altere a borda para um vermelho mais forte ao focar */
+    box-shadow: 0 0 10px rgba(255, 51, 0, 0.5); /* Efeito de brilho suave ao focar */
+    outline: none;
+}

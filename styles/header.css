@@ -1,0 +1,99 @@
+/* Menu Hambúrguer */
+.cabeçalho__menu-hamburguer {
+    width: 30px; /* Aumentei um pouco o tamanho para tornar o ícone mais visível */
+    height: 30px;
+    display: inline-block;
+    background-image: url("../img/Menu.svg"); /* Ícone do menu */
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Efeito de transição para o clique */
+}
+
+.cabeçalho__menu-hamburguer:hover {
+    transform: scale(1.1); /* Efeito de zoom no hover para indicar interatividade */
+}
+
+/* Cabeçalho */
+.cabeçalho {
+    background-color: #1C1C1C; /* Fundo escuro para contraste e modernidade */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adicionei uma sombra sutil para dar profundidade */
+    z-index: 10;
+}
+
+/* Container do Cabeçalho */
+.container {
+    display: flex;
+    align-items: center;
+}
+
+/* Imagem do Container */
+.container__imagem {
+    padding: 1em;
+}
+
+/* Lista de Menu */
+.lista-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 60vw; /* Largura maior para dar mais visibilidade ao menu */
+    background-color: #FF3300; /* Cor vibrante para o fundo do menu */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para profundidade */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Suaviza a transição ao exibir */
+    opacity: 0; /* Inicia invisível */
+    transform: translateY(-20px); /* Efeito de entrada suave do menu */
+}
+
+.container__botao:checked ~ .lista-menu {
+    display: block;
+    opacity: 1;
+    transform: translateY(0); /* Remove a animação de entrada quando o botão for marcado */
+}
+
+/* Título e Itens do Menu */
+.lista-menu__titulo,
+.lista-menu__item {
+    padding: 1em;
+    background-color: #FF3300; /* Fundo do menu */
+    color: #FFFFFF; /* Texto branco para contrastar */
+    font-weight: 700;
+    font-size: 18px;
+    border-bottom: 1px solid #FFFFFF; /* Separação entre os itens */
+}
+
+/* Título do Menu */
+.lista-menu__titulo {
+    color: #FFFFFF; /* Título em branco */
+}
+
+/* Links do Menu */
+.lista-menu__link {
+    background: linear-gradient(45deg, #FFCC00, #FF3300); /* Gradiente de cores quentes, como o relâmpago */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 16px;
+    display: block;
+    padding: 0.8em 0;
+    text-align: center;
+    transition: color 0.3s ease; /* Efeito suave para o hover */
+}
+
+.lista-menu__link:hover {
+    color: #1E90FF; /* Altera a cor do texto ao passar o mouse */
+}
+
+/* Botão do Container */
+.container__botao {
+    display: none;
+}
